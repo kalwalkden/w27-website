@@ -344,6 +344,7 @@ a {
   font-weight: 500;
   color: var(--text-strong);
   text-wrap: balance;
+  overflow-wrap: anywhere;
 }
 
 .case-study-item p {
@@ -351,6 +352,7 @@ a {
   font-size: 0.93rem;
   line-height: 1.58;
   color: rgba(237, 242, 235, 0.96);
+  overflow-wrap: anywhere;
 }
 
 .case-study-item p strong {
@@ -375,6 +377,7 @@ a {
   color: var(--gold-accent);
   text-decoration: none;
   border-bottom: 1px solid rgba(198, 163, 109, 0.48);
+  text-underline-offset: 0.22em;
   transition: color 140ms ease, border-color 140ms ease;
 }
 
@@ -385,8 +388,14 @@ a {
 
 .case-study-item p:last-child a:focus-visible {
   outline: 2px solid var(--gold-accent);
-  outline-offset: 3px;
+  outline-offset: 4px;
   box-shadow: 0 0 0 4px rgba(4, 8, 5, 0.5);
+}
+
+@media (max-width: 780px) {
+  .case-study-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 .cta {
