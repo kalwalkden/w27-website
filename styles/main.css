@@ -556,6 +556,60 @@ a {
   gap: var(--space-4);
 }
 
+.final-cta {
+  margin-top: clamp(1rem, 3vh, 2rem);
+  padding: clamp(1.4rem, 3.6vw, 2.2rem);
+  border: 1px solid rgba(198, 163, 109, 0.34);
+  border-radius: 4px;
+  background:
+    linear-gradient(160deg, rgba(198, 163, 109, 0.12), rgba(198, 163, 109, 0.02)),
+    rgba(9, 14, 11, 0.54);
+  backdrop-filter: blur(1.5px);
+  scroll-margin-top: 1.5rem;
+}
+
+.final-cta h2 {
+  margin: 0;
+  max-width: 20ch;
+  font-size: clamp(1.6rem, 3.15vw, 2.3rem);
+  line-height: 1.14;
+  font-weight: 500;
+  color: var(--text-strong);
+  text-wrap: balance;
+}
+
+.final-cta p {
+  margin: 0.95rem 0 0;
+}
+
+.final-cta p:first-of-type {
+  max-width: 62ch;
+  font-size: 0.98rem;
+  line-height: 1.62;
+  color: rgba(239, 243, 237, 0.94);
+}
+
+.final-cta p:last-of-type {
+  margin-top: 1.15rem;
+}
+
+.final-cta .cta-primary {
+  min-width: min(100%, 18.5rem);
+  background: rgba(198, 163, 109, 0.24);
+  border-color: rgba(198, 163, 109, 0.58);
+  color: #f6e4c2;
+}
+
+.final-cta .cta-primary:hover {
+  background: rgba(198, 163, 109, 0.34);
+  border-color: rgba(198, 163, 109, 0.76);
+  color: #fff2dc;
+}
+
+.final-cta .cta-primary:active {
+  background: rgba(198, 163, 109, 0.38);
+}
+
 @media (max-width: 780px) {
   .case-study-list {
     grid-template-columns: 1fr;
@@ -667,6 +721,11 @@ a {
   .about-preview-profiles {
     gap: 1.2rem;
   }
+
+  .final-cta h2 {
+    max-width: 22ch;
+    font-size: clamp(1.52rem, 3.25vw, 2.05rem);
+  }
 }
 
 @media (max-width: 640px) {
@@ -758,6 +817,31 @@ a {
     max-width: 24ch;
     font-size: clamp(1.45rem, 6.2vw, 1.88rem);
     line-height: 1.2;
+  }
+
+  .final-cta {
+    margin-top: 0.7rem;
+    padding: 1.05rem 1rem 1.15rem;
+  }
+
+  .final-cta h2 {
+    max-width: 18ch;
+    font-size: clamp(1.4rem, 6vw, 1.8rem);
+    line-height: 1.18;
+  }
+
+  .final-cta p:first-of-type {
+    margin-top: 0.82rem;
+    font-size: 0.93rem;
+    line-height: 1.55;
+  }
+
+  .final-cta p:last-of-type {
+    margin-top: 0.9rem;
+  }
+
+  .final-cta .cta-primary {
+    width: 100%;
   }
 
   .section-intro {
@@ -924,6 +1008,7 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .final-cta .cta-primary,
   .outcome-item,
   .case-study-item,
   .how-we-work-step article,
