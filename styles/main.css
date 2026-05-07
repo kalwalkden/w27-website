@@ -392,6 +392,91 @@ a {
   box-shadow: 0 0 0 4px rgba(4, 8, 5, 0.5);
 }
 
+.how-we-work {
+  padding-block: clamp(2.75rem, 8vh, 5.25rem);
+  scroll-margin-top: 1.5rem;
+}
+
+.how-we-work h2 {
+  margin: 0.5rem 0 0;
+  max-width: 26ch;
+  font-size: clamp(1.7rem, 3.1vw, 2.45rem);
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.how-we-work-steps {
+  margin: clamp(1.5rem, 4vh, 2.4rem) 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-6);
+  counter-reset: how-we-work-step;
+}
+
+.how-we-work-step {
+  counter-increment: how-we-work-step;
+  min-height: 100%;
+}
+
+.how-we-work-step article {
+  min-height: 100%;
+  padding: 1.2rem 1.2rem 1.25rem;
+  border: 1px solid rgba(243, 245, 239, 0.2);
+  border-radius: 4px;
+  background-color: rgba(8, 13, 10, 0.52);
+  backdrop-filter: blur(1.5px);
+  transition: border-color 140ms ease, box-shadow 140ms ease, background-color 140ms ease;
+}
+
+.how-we-work-step article:hover {
+  border-color: rgba(198, 163, 109, 0.42);
+  background-color: rgba(10, 16, 12, 0.56);
+}
+
+.how-we-work-step article:focus-within {
+  border-color: rgba(198, 163, 109, 0.82);
+  box-shadow:
+    0 0 0 1px rgba(198, 163, 109, 0.88),
+    0 0 0 4px rgba(198, 163, 109, 0.24);
+}
+
+.how-we-work-step h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-weight: 500;
+  color: var(--text-strong);
+}
+
+.how-we-work-step h3::before {
+  content: counter(how-we-work-step, decimal-leading-zero);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.1rem;
+  min-height: 2.1rem;
+  margin-right: 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(198, 163, 109, 0.45);
+  background-color: rgba(198, 163, 109, 0.14);
+  color: #f4dfbb;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  vertical-align: middle;
+}
+
+.how-we-work-step p {
+  margin: 0.8rem 0 0;
+  font-size: 0.93rem;
+  line-height: 1.58;
+  color: rgba(237, 242, 235, 0.96);
+  overflow-wrap: anywhere;
+}
+
 @media (max-width: 780px) {
   .case-study-list {
     grid-template-columns: 1fr;
@@ -638,6 +723,7 @@ a {
 @media (prefers-reduced-motion: reduce) {
   .outcome-item,
   .case-study-item,
+  .how-we-work-step article,
   .case-study-item p:last-child a {
     transition: none;
   }
