@@ -610,6 +610,13 @@ a {
   background: rgba(198, 163, 109, 0.38);
 }
 
+.final-cta .cta-primary:focus-visible {
+  border-color: rgba(198, 163, 109, 0.9);
+  box-shadow:
+    0 0 0 1px rgba(198, 163, 109, 0.92),
+    0 0 0 5px rgba(4, 8, 5, 0.6);
+}
+
 @media (max-width: 780px) {
   .case-study-list {
     grid-template-columns: 1fr;
