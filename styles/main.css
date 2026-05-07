@@ -31,7 +31,7 @@ body {
 body {
   background-color: var(--page-bg);
   background-image:
-    linear-gradient(to bottom, rgba(4, 8, 5, 0.78), rgba(4, 8, 5, 0.9)),
+    linear-gradient(to bottom, rgba(4, 8, 5, 0.72), rgba(4, 8, 5, 0.9)),
     radial-gradient(circle at 76% 24%, rgba(11, 45, 21, 0.32), rgba(2, 7, 4, 0.08) 46%, transparent 66%),
     url("../assets/fron-background.jpg");
   background-position: center center, center center, center center;
@@ -95,6 +95,9 @@ a {
 }
 
 .primary-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
   font-size: 0.89rem;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -110,8 +113,9 @@ a {
 .brand-link:focus-visible,
 .primary-nav a:focus-visible,
 .cta:focus-visible {
-  outline: 2px solid var(--text-primary);
-  outline-offset: 4px;
+  outline: 2px solid var(--gold-accent);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(4, 8, 5, 0.5);
 }
 
 .hero-content {
@@ -135,7 +139,7 @@ a {
   max-width: 64ch;
   font-size: clamp(1.04rem, 1.4vw, 1.28rem);
   line-height: 1.62;
-  color: rgba(236, 240, 233, 0.92);
+  color: rgba(240, 243, 237, 0.95);
 }
 
 .hero-actions {
@@ -183,8 +187,33 @@ a {
   color: var(--gold-accent);
 }
 
+@media (max-width: 960px) {
+  .shell-header {
+    align-items: flex-start;
+  }
+
+  .primary-nav {
+    justify-content: flex-start;
+    row-gap: 0.5rem;
+  }
+
+  .hero-content {
+    max-width: 720px;
+    padding-block: clamp(4.4rem, 13vh, 7rem);
+  }
+
+  .hero-content h1 {
+    max-width: 19ch;
+  }
+}
+
 @media (max-width: 640px) {
   body {
+    background-image:
+      linear-gradient(to bottom, rgba(4, 8, 5, 0.8), rgba(4, 8, 5, 0.93)),
+      radial-gradient(circle at 70% 20%, rgba(11, 45, 21, 0.3), rgba(2, 7, 4, 0.12) 48%, transparent 70%),
+      url("../assets/fron-background.jpg");
+    background-position: center top, center top, 58% center;
     background-attachment: scroll;
   }
 
@@ -208,6 +237,7 @@ a {
   .primary-nav a {
     font-size: 0.8rem;
     letter-spacing: 0.07em;
+    min-height: 2.5rem;
   }
 
   .hero-content {
@@ -219,6 +249,17 @@ a {
   }
 
   .cta {
-    flex: 1 1 auto;
+    flex: 1 1 calc(50% - (var(--space-4) / 2));
+    min-height: 3rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-actions {
+    gap: 0.75rem;
+  }
+
+  .cta {
+    flex: 1 1 100%;
   }
 }
