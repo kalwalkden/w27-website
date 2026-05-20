@@ -593,6 +593,41 @@ a {
   margin-top: 1.15rem;
 }
 
+.final-cta-form {
+  margin-top: 1.15rem;
+  display: grid;
+  gap: 0.75rem;
+  max-width: 42rem;
+}
+
+.final-cta-form input,
+.final-cta-form textarea {
+  width: 100%;
+  border: 1px solid rgba(243, 245, 239, 0.3);
+  border-radius: 2px;
+  background: rgba(6, 10, 8, 0.62);
+  color: var(--text-primary);
+  font: inherit;
+  padding: 0.78rem 0.85rem;
+}
+
+.final-cta-form input::placeholder,
+.final-cta-form textarea::placeholder {
+  color: rgba(210, 216, 207, 0.9);
+}
+
+.final-cta-form textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.final-cta-form input:focus-visible,
+.final-cta-form textarea:focus-visible {
+  outline: 2px solid var(--gold-accent);
+  outline-offset: 2px;
+  border-color: rgba(198, 163, 109, 0.82);
+}
+
 .final-cta .cta-primary {
   min-width: min(100%, 18.5rem);
   background: rgba(198, 163, 109, 0.24);
@@ -608,6 +643,13 @@ a {
 
 .final-cta .cta-primary:active {
   background: rgba(198, 163, 109, 0.38);
+}
+
+.final-cta-form .cta-primary {
+  justify-self: start;
+  border-radius: 2px;
+  font-family: inherit;
+  cursor: pointer;
 }
 
 @media (max-width: 780px) {
@@ -840,8 +882,21 @@ a {
     margin-top: 0.9rem;
   }
 
+  .final-cta-form {
+    margin-top: 0.9rem;
+    gap: 0.68rem;
+  }
+
+  .final-cta-form textarea {
+    min-height: 6.4rem;
+  }
+
   .final-cta .cta-primary {
     width: 100%;
+  }
+
+  .final-cta-form .cta-primary {
+    justify-self: stretch;
   }
 
   .section-intro {
