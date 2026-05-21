@@ -35,7 +35,7 @@ body {
   background-image:
     linear-gradient(to bottom, rgba(4, 8, 5, 0.64), rgba(4, 8, 5, 0.84)),
     radial-gradient(circle at 76% 24%, rgba(25, 82, 34, 0.34), rgba(2, 7, 4, 0.06) 46%, transparent 66%),
-    url("../assets/fron-background.jpg");
+    url("../assets/w27-frond-background.jpg");
   background-position: center center, center center, center center;
   background-size: cover, cover, cover;
   background-repeat: no-repeat;
@@ -810,7 +810,7 @@ a {
     background-image:
       linear-gradient(to bottom, rgba(4, 8, 5, 0.72), rgba(4, 8, 5, 0.9)),
       radial-gradient(circle at 66% 16%, rgba(20, 66, 28, 0.26), rgba(2, 7, 4, 0.08) 48%, transparent 70%),
-      url("../assets/fron-background.jpg");
+      url("../assets/w27-frond-background.jpg");
     background-position: center top, center top, 66% top;
     background-size: cover, cover, auto 100vh;
     background-size: cover, cover, auto 100svh;
