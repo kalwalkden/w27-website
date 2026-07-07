@@ -677,6 +677,16 @@ a {
   cursor: pointer;
 }
 
+.site-footer {
+  padding-block: 1.35rem 0.25rem;
+  color: rgba(221, 227, 218, 0.68);
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.82rem;
+}
+
 @media (max-width: 780px) {
   .case-study-list {
     grid-template-columns: 1fr;
