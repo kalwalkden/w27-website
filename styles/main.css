@@ -493,7 +493,7 @@ a {
 }
 
 .how-we-work-step h3::before {
-  content: counter(how-we-work-step, decimal-leading-zero);
+  content: counter(how-we-work-step);
   display: inline-flex;
   align-items: center;
   justify-content: center;
